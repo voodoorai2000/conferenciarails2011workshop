@@ -1,0 +1,56 @@
+Creamos la aplicación
+	 rails new into_rails_workshop
+	 cd intro_rails_workshop
+	 rails server
+	 
+	 visitar http://localhost:3000
+		
+Hello World
+  borramos el archivo public/index.html.erb
+  
+  rails generate controller welcome index
+  visitar http://localhost:3000/welcome/index
+  
+  #app/views/welcome/index.html.erb
+  	<h1>Hello Rails!</h1>
+  
+  #config/routes.rb
+    borramos:   
+    	get "welcome/index"
+    
+    ponemos:  
+    	root :to => "welcome#index"
+  
+Scaffolds
+	rails generate scaffold event name:string description:text date:datetime
+  http://localhost:3000/events
+  
+	rake db:migrate
+	
+  rails generate scaffold person first_name:string last_name:string email:string
+  
+	rake db:migrate
+  
+Links  
+  añadir links a "Events" y "People" en el index
+	Pista http://api.rubyonrails.org/classes/ActionView/Helpers/UrlHelper.html#method-i-link_to
+  
+  #public/stylesheets/scaffold.css
+  	añadir unos estilos para espaciar el menu
+  
+Deploy
+  crear una cuenta en http://heroku.com
+	sudo gem install heroku
+	git init
+	git add .
+	git commit -m "my new rails app"
+	heroku create intro-rails-workshop-tu-nombre
+	git push heroku master
+	heroku rake db:migrate
+	
+	comprobar que se ha deployado bien la aplicacion en la url que nos da el log de heroku en la consola
+	(http://intro-rails-tu-nombre.heroku.com)
+
+Levantar el puño en símbolo de victoria!
+
+
