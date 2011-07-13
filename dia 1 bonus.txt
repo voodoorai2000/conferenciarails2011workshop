@@ -1,0 +1,29 @@
+Validaciones
+	Añadir una validadcion para la presencia del nombre del evento
+	Pista Buscar "validates" en http://apidock.com/rails/
+	
+	Intentar crear un evento sin nombre desde el navegador deberíamos ver un error
+	
+Notice
+	Cambiar el mensaje que ve el usuario después de crear un nuevo evento:
+	 de: "Event succesfully created" 
+	 a:  "Evento creado correctamente"
+	 Pista	http://guides.rubyonrails.org/action_controller_overview.html#the-flash
+
+Emails
+	Enviar un email de bienvenida cuando se crea un nuevo usuario
+	Pista http://guides.rubyonrails.org/action_mailer_basics.html#sending-emails
+
+	Comprobar que se envia el email mirando el log de nuestro servidor.
+
+Sibaritismus maximus:
+  Enviar los emails de verdad:
+    Instalar el addon sendgrid en heroku
+    http://devcenter.heroku.com/articles/sendgrid
+    
+    Tendrás que confirmar tu cuenta de heroku con una 
+    tarjeta de credito (tranquilo no te cobrarán nada ;)
+    
+    Deployar a Heroku
+    Crear un usuario con nuestro email personal.
+    Asegurarnos que nos llega el email a nuesta cuenta de correo.
